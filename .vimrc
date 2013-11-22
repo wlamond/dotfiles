@@ -3,16 +3,12 @@ set nocompatible
 let vundle_autoinstall = 0
 let vundle_readme = expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
-	echo "Installing Vundle..."
-	echo ""
-	silent !mkdir -p ~/.vim/bundle
-	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-	let vundle_autoinstall = 1
+  echo "Installing Vundle..."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let vundle_autoinstall = 1
 endif
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
@@ -38,7 +34,6 @@ set incsearch
 
 syntax on 
 filetype plugin indent on
-let &t_AB="\e[48;5;%dm"
 
 " set up some keybinds... 
 let mapleader = ","
@@ -59,11 +54,12 @@ vnoremap > >gv
 set tags=./tags;/
 
 if vundle_autoinstall
-	echo "Installing bundles..."
-	echo ""
-	:BundleInstall
+  echo "Installing bundles..."
+  echo ""
+  :BundleInstall
 endif
 
+let g:ctrlp_map = '<leader>f'
 let g:ctrlp_user_command = "find %s -type f -not -wholename '*.svn*' " .
                          \ "-not -iname '*.jpg' " .
                          \ "-not -iname '*.gif' " .
