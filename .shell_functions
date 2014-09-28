@@ -1,0 +1,4 @@
+function venv_activate {
+  local VENVNAME=$1
+  source ~/virtual_envs/$VENVNAME/bin/activate
+}
