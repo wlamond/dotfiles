@@ -2,3 +2,12 @@ function venv_activate {
   local VENVNAME=$1
   source ~/virtual_envs/$VENVNAME/bin/activate
 }
+
+ipy() {
+    cd ~/ipy_notebooks
+    ipython notebook --ip='*'
+}
+
+cdiff() {
+  diff --lef-column --suppress-common-lines --side-by-side $1 $2 | less
+}

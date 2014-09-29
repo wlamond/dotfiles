@@ -1,4 +1,8 @@
 alias tmcs='tmux -2 new-session -s'
 alias tma='tmux -2 attach -t'
+
 alias wfrec='ssh devrec09.csnzoo.com'
 alias wfsf='ssh devwebphp208.csnzoo.com'
+
+alias gitaddall='git diff --name-only | xargs git add'
+alias gitamend='git commit --amend --no-edit'
