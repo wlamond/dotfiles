@@ -6,3 +6,5 @@ alias wfsf='ssh devwebphp208.csnzoo.com'
 
 alias gitaddall='git add -A'
 alias gitamend='git commit --amend --no-edit'
+
+alias mgh='ssh -YCc arcfour,blowfish-cbc wsl2@door.nmr.mgh.harvard.edu'
