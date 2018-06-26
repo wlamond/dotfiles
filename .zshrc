@@ -108,3 +108,7 @@ export KEYTIMEOUT=0.1
 if [ -f ~/.dotfiles/.shell_aliases ]; then
   . ~/.dotfiles/.shell_aliases
 fi
+
+if [ -f ~/.local_config ]; then
+  . ~/.local_config
+fi
